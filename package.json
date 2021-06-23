@@ -10,6 +10,7 @@
     "triggerAllTests-dashboard": "npx cypress run --record --key 55264f7b-87b5-465d-adf8-289e1ca825c7",
     "triggerAllTests-update-snapshots": "npx cypress run --env updateSnapshots=true",
     "triggerAllTests-Quickorder": "npx cypress run --spec cypress/integration/e2e/QuickOrder-spec.js",
+    "triggerAllTests-webdriver-uni": "npx cypress run --spec cypress/integration/e2e/webdriver-uni-spec.js",
     "triggerAllTests-Tex-X": "npx cypress run --spec cypress/integration/e2e/Tex-X-spec.js",
     "junit-merge": "npx junit-merge -d cypress/reports/junit -o cypress/reports/junit/results.xml",
     "delete-junit-reports": "rm -rf cypress/reports/junit/* || true",

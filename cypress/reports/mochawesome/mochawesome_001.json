@@ -1,0 +1,126 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-06-23T21:10:27.634Z",
+    "end": "2021-06-23T21:10:36.005Z",
+    "duration": 8371,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d86cd08e-2fa1-4bff-a14d-7d806fff5f68",
+      "title": "",
+      "fullFile": "cypress/integration/e2e/webdriver-uni-spec.js",
+      "file": "cypress/integration/e2e/webdriver-uni-spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3ab34ada-4119-41c7-8d8c-57e064521144",
+          "title": "",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Should not able to submit form without required fields",
+              "fullTitle": " Should not able to submit form without required fields",
+              "timedOut": null,
+              "duration": 3485,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#contact-us').invoke('removeAttr', 'target').click({\n  force: true\n});\ncy.get('input[name=\"first_name\"]').type('Rehan');\ncy.get('input[name=\"last_name\"]').type('Khan');\ncy.get('input[name=\"email\"]').type('testemail@yopmail.com');\ncy.get('input[value=\"SUBMIT\"]').click();\ncy.get('body').contains('Error: all fields are required');",
+              "err": {},
+              "uuid": "d83af9d7-ad3c-4ea2-8a88-e28e3bbb955a",
+              "parentUUID": "3ab34ada-4119-41c7-8d8c-57e064521144",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Should able to submit contact us page with required fields",
+              "fullTitle": " Should able to submit contact us page with required fields",
+              "timedOut": null,
+              "duration": 3020,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#contact-us').invoke('removeAttr', 'target').click({\n  force: true\n});\ncy.get('input[name=\"first_name\"]').type('Rehan');\ncy.get('input[name=\"last_name\"]').type('Khan');\ncy.get('input[name=\"email\"]').type('testemail@yopmail.com');\ncy.get('textarea[name=\"message\"]').type(\"testing\");\ncy.get('input[value=\"SUBMIT\"]').click();\ncy.get('h1').contains('Thank You for your Message!');",
+              "err": {},
+              "uuid": "76e03704-19e5-4b7e-93b2-5a3a1c716940",
+              "parentUUID": "3ab34ada-4119-41c7-8d8c-57e064521144",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d83af9d7-ad3c-4ea2-8a88-e28e3bbb955a",
+            "76e03704-19e5-4b7e-93b2-5a3a1c716940"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6505,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mochawesome",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}
