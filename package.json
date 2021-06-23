@@ -1,0 +1,40 @@
+{
+  "name": "quickorder-automation-framework",
+  "version": "1.0.0",
+  "description": "Quick Order Automation Framework",
+  "main": "index.js",
+  "scripts": {
+    "triggerAllTests-headless": "npx cypress run",
+    "triggerAllTests-headed": "npx cypress run --headed",
+    "triggerAllTests-chrome": "npx cypress run --browser chrome",
+    "triggerAllTests-dashboard": "npx cypress run --record --key 55264f7b-87b5-465d-adf8-289e1ca825c7",
+    "triggerAllTests-update-snapshots": "npx cypress run --env updateSnapshots=true",
+    "triggerAllTests-Quickorder": "npx cypress run --spec cypress/integration/e2e/QuickOrder-spec.js",
+    "triggerAllTests-Tex-X": "npx cypress run --spec cypress/integration/e2e/Tex-X-spec.js",
+    "junit-merge": "npx junit-merge -d cypress/reports/junit -o cypress/reports/junit/results.xml",
+    "delete-junit-reports": "rm -rf cypress/reports/junit/* || true",
+    "delete-results": "rm -rf cypress/reports/* || true",
+    "delete-mochawesome-json": "rm -rf mochawesome.json",
+    "delete-mochawesome-report": "rm -rf mochawesome-report/* || true",
+    "mochawesome-merge": "npx mochawesome-merge cypress/reports/mochawesome/*.json > mochawesome.json && npx marge mochawesome.json",
+    "cypress-regression-pack": "npm run delete-mochawesome-json && npm run delete-results && npm run delete-mochawesome-report && npm run triggerAllTests-Tex-X && npm run mochawesome-merge"
+  },
+  "author": "Rehan Khan",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "cypress": "^7.3.0",
+    "cypress-cucumber-preprocessor": "^4.0.3",
+    "cypress-file-upload": "^5.0.2",
+    "cypress-iframe": "^1.0.1",
+    "cypress-image-snapshot": "^4.0.1",
+    "cypress-multi-reporters": "^1.4.0",
+    "cypress-xpath": "^1.6.2",
+    "mocha": "^8.3.2",
+    "mocha-junit-reporter": "^1.23.3",
+    "mochawesome": "^6.2.2",
+    "mochawesome-merge": "^4.2.0",
+    "mochawesome-report-generator": "^5.2.0",
+    "prettier": "^2.2.1"
+  }
+}

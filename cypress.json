@@ -1,0 +1,23 @@
+{
+  "watchForFilesChanges": false,
+  "browser":  "chrome",
+  "chromeWebSecurity": false,
+  "viewportWidth": 1200,
+  "veiwportHeight": 600,
+  "waitforAnimation": true,
+  "animationDistanceTreshhold": 20,
+  "defaultCommandTimeout": 90000,
+  "execTimeout": 60000,
+  "pageLoadTimeout": 90000,
+  "requestTimeout": 40000,
+  "responseTimeout": 15000,
+  "video": false,
+  "failOnStatusCode": false,
+  "projectId": "oshyj1", 
+  "blacktHosts": ["*salesforce.com"],
+  "reporter": "cypress-multi-reporters",
+  "reporterOptions": {
+  "configFile": "reporter-config.json"
+  }
+  
+}
